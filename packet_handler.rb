@@ -45,8 +45,8 @@ module Kitler
         if status == "YES"
           msg = "§2Weryfikacja pomyslna, #{@username}"
           status = "OK"
-          http = EventMachine::HttpRequest.new("https://freeservers.pl/utils/pingback.php").get :query => {
-          'secret' => 'sekretnyphasemacera666kochamyszatanajezusprecz',
+          http = EventMachine::HttpRequest.new("pingback.php").get :query => {
+          'secret' => 'secretphrase',
           'user' => @username
           }
           http.callback {}
